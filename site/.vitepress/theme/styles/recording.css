@@ -1,0 +1,282 @@
+/**
+ * 录屏专用样式
+ * 专注模式：隐藏干扰元素，聚焦内容
+ */
+
+/* ============================================
+   专注模式 (Recording Mode)
+   按 F 键切换，ESC 退出
+   ============================================ */
+
+body.recording-mode {
+  /* 隐藏导航栏 */
+  .VPNav {
+    display: none;
+  }
+  
+  /* 隐藏侧边栏 */
+  .VPSidebar {
+    display: none;
+  }
+  
+  /* 隐藏大纲 */
+  .VPDocAside {
+    display: none;
+  }
+  
+  /* 内容区域全宽 */
+  .VPDoc .container {
+    max-width: 900px;
+  }
+  
+  .VPDoc .content {
+    max-width: 100%;
+    padding: 0 48px;
+  }
+  
+  /* 增加底部留白（字幕区域） */
+  .VPDoc {
+    padding-bottom: 100px;
+  }
+  
+  /* 隐藏页脚 */
+  .VPDocFooter {
+    display: none;
+  }
+  
+  /* 隐藏返回顶部按钮 */
+  .VPLocalNavOutlineDropdown {
+    display: none;
+  }
+}
+
+/* ============================================
+   录屏提示
+   ============================================ */
+
+.recording-hint {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--vp-c-bg-elv);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--vp-c-text-3);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+body:hover .recording-hint {
+  opacity: 1;
+}
+
+.recording-hint kbd {
+  background: var(--vp-c-bg-soft);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+/* ============================================
+   进度条
+   ============================================ */
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--vp-c-brand-1);
+  z-index: 1001;
+  transition: width 0.1s ease;
+}
+
+/* ============================================
+   录屏优化 - 默认状态下的改进
+   ============================================ */
+
+/* 增加内容区域呼吸感 */
+.VPDoc {
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
+/* 章节标题更突出 */
+.VPDoc h1 {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.VPDoc h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--vp-c-brand-1);
+  border-radius: 2px;
+}
+
+/* 小节标题装饰 */
+.VPDoc h2 {
+  position: relative;
+  padding-left: 16px;
+}
+
+.VPDoc h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background: var(--vp-c-brand-1);
+  border-radius: 2px;
+}
+
+/* 图片样式 */
+.VPDoc img {
+  border-radius: var(--radius-md);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: var(--space-element) auto;
+}
+
+/* 图片标题 */
+.VPDoc img + em {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: var(--vp-c-text-3);
+  margin-top: 8px;
+}
+
+/* ============================================
+   响应式优化
+   ============================================ */
+
+@media (max-width: 768px) {
+  :root {
+    --text-hero: 36px;
+    --text-section: 28px;
+    --text-headline: 20px;
+    --text-subhead: 18px;
+    --text-body: 16px;
+  }
+  
+  .VPDoc .content {
+    padding: 0 16px;
+  }
+  
+  body.recording-mode .VPDoc .content {
+    padding: 0 24px;
+  }
+}
+
+/* ============================================
+   侧边栏和大纲开关按钮
+   ============================================ */
+
+/* 侧边栏折叠按钮 */
+.VPSidebar {
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+body.sidebar-collapsed .VPSidebar {
+  transform: translateX(-100%);
+  width: 0;
+}
+
+/* 大纲折叠按钮 */
+.VPDocAside {
+  transition: transform 0.3s ease, width 0.3s ease, opacity 0.3s ease;
+}
+
+body.outline-collapsed .VPDocAside {
+  transform: translateX(100%);
+  width: 0;
+  opacity: 0;
+}
+
+/* 切换按钮容器 */
+.layout-toggle-buttons {
+  position: fixed;
+  top: calc(var(--vp-nav-height) + 16px);
+  left: 16px;
+  z-index: 100;
+  display: flex;
+  gap: 8px;
+}
+
+/* 切换按钮 */
+.layout-toggle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--vp-c-bg-elv);
+  border: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.layout-toggle-btn:hover {
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-brand-1);
+}
+
+.layout-toggle-btn.active {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+}
+
+/* 侧边栏展开时的偏移调整 */
+body.has-sidebar .layout-toggle-buttons {
+  left: calc(var(--vp-sidebar-width) + 16px);
+}
+
+@media (max-width: 960px) {
+  body.has-sidebar .layout-toggle-buttons {
+    left: 16px;
+  }
+}
+
+/* ============================================
+   打印样式
+   ============================================ */
+
+@media print {
+  .VPNav,
+  .VPSidebar,
+  .VPDocAside,
+  .VPDocFooter,
+  .reading-progress,
+  .layout-toggle-buttons {
+    display: none !important;
+  }
+  
+  .VPDoc .content {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+}

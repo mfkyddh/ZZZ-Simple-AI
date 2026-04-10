@@ -1,0 +1,27 @@
+{
+  "name": "zzz-simple-ai-site",
+  "version": "1.0.0",
+  "description": "ZZZ 白话讲 AI - 静态网站",
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-content.js",
+    "dev": "pnpm run sync && vitepress dev",
+    "build": "pnpm run sync && vitepress build",
+    "preview": "vitepress preview"
+  },
+  "keywords": [
+    "AI",
+    "LLM",
+    "tutorial",
+    "documentation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.33.0",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0",
+    "vitepress": "^1.0.0",
+    "vue": "^3.4.0"
+  }
+}

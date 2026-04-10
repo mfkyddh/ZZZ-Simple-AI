@@ -1,2 +1,8 @@
 .workbuddy/
 docs/superpowers/
+
+# Site dependencies (site/ has its own .gitignore)
+site/node_modules/
+site/.vitepress/dist/
+site/.vitepress/cache/
+site/content/
