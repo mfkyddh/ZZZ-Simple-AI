@@ -26,7 +26,7 @@ export default {
         }
       })
 
-      // 路由切换后添加进度条、提示和切换按钮
+      // 路由切换后添加进度条、提示
       router.onAfterRouteChanged = () => {
         nextTick(() => {
           // 添加阅读进度条
@@ -49,36 +49,6 @@ export default {
             hint.className = 'recording-hint'
             hint.innerHTML = '按 <kbd>F</kbd> 进入专注模式，<kbd>ESC</kbd> 退出'
             document.body.appendChild(hint)
-          }
-
-          // 添加侧边栏和大纲切换按钮
-          if (!document.querySelector('.layout-toggle-buttons')) {
-            const toggleContainer = document.createElement('div')
-            toggleContainer.className = 'layout-toggle-buttons'
-            
-            // 侧边栏切换按钮
-            const sidebarBtn = document.createElement('button')
-            sidebarBtn.className = 'layout-toggle-btn active'
-            sidebarBtn.innerHTML = '☰'
-            sidebarBtn.title = '切换侧边栏'
-            sidebarBtn.onclick = () => {
-              document.body.classList.toggle('sidebar-collapsed')
-              sidebarBtn.classList.toggle('active')
-            }
-            
-            // 大纲切换按钮
-            const outlineBtn = document.createElement('button')
-            outlineBtn.className = 'layout-toggle-btn active'
-            outlineBtn.innerHTML = '≡'
-            outlineBtn.title = '切换大纲'
-            outlineBtn.onclick = () => {
-              document.body.classList.toggle('outline-collapsed')
-              outlineBtn.classList.toggle('active')
-            }
-            
-            toggleContainer.appendChild(sidebarBtn)
-            toggleContainer.appendChild(outlineBtn)
-            document.body.appendChild(toggleContainer)
           }
         })
       }

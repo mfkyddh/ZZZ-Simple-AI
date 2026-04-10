@@ -8,46 +8,64 @@
    按 F 键切换，ESC 退出
    ============================================ */
 
-body.recording-mode {
-  /* 隐藏导航栏 */
-  .VPNav {
-    display: none;
-  }
-  
-  /* 隐藏侧边栏 */
-  .VPSidebar {
-    display: none;
-  }
-  
-  /* 隐藏大纲 */
-  .VPDocAside {
-    display: none;
-  }
-  
-  /* 内容区域全宽 */
-  .VPDoc .container {
-    max-width: 900px;
-  }
-  
-  .VPDoc .content {
-    max-width: 100%;
-    padding: 0 48px;
-  }
-  
-  /* 增加底部留白（字幕区域） */
-  .VPDoc {
-    padding-bottom: 100px;
-  }
-  
-  /* 隐藏页脚 */
-  .VPDocFooter {
-    display: none;
-  }
-  
-  /* 隐藏返回顶部按钮 */
-  .VPLocalNavOutlineDropdown {
-    display: none;
-  }
+/* 隐藏导航栏 */
+body.recording-mode .VPNav {
+  display: none !important;
+}
+
+/* 隐藏侧边栏 */
+body.recording-mode .VPSidebar {
+  display: none !important;
+}
+
+/* 隐藏大纲 - 包括容器 */
+body.recording-mode .VPDocAside,
+body.recording-mode .VPDoc > .container > .aside {
+  display: none !important;
+}
+
+/* 移除布局约束，VPDoc 和 VPContent 全宽 */
+body.recording-mode .VPContent {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.recording-mode .VPDoc {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-bottom: 100px;
+}
+
+/* 容器全宽 */
+body.recording-mode .VPDoc > .container {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* 正文区域占屏幕 80%，居中 */
+body.recording-mode .VPDoc > .container > .content {
+  max-width: 80% !important;
+  width: 80% !important;
+  flex: none !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+/* 去掉 content-container 的固定宽度限制 */
+body.recording-mode .VPDoc > .container > .content > .content-container {
+  max-width: 100% !important;
+}
+
+/* 隐藏页脚 */
+body.recording-mode .VPDocFooter {
+  display: none !important;
+}
+
+/* 隐藏返回顶部按钮 */
+body.recording-mode .VPLocalNavOutlineDropdown {
+  display: none !important;
 }
 
 /* ============================================
@@ -103,8 +121,8 @@ body:hover .recording-hint {
 
 /* 增加内容区域呼吸感 */
 .VPDoc {
-  padding-top: 32px;
-  padding-bottom: 64px;
+  padding-top: 16px;
+  padding-bottom: 32px;
 }
 
 /* 章节标题更突出 */
@@ -178,83 +196,12 @@ body:hover .recording-hint {
   }
   
   body.recording-mode .VPDoc .content {
-    padding: 0 24px;
+    max-width: 95% !important;
+    padding: 0 !important;
   }
 }
 
-/* ============================================
-   侧边栏和大纲开关按钮
-   ============================================ */
 
-/* 侧边栏折叠按钮 */
-.VPSidebar {
-  transition: transform 0.3s ease, width 0.3s ease;
-}
-
-body.sidebar-collapsed .VPSidebar {
-  transform: translateX(-100%);
-  width: 0;
-}
-
-/* 大纲折叠按钮 */
-.VPDocAside {
-  transition: transform 0.3s ease, width 0.3s ease, opacity 0.3s ease;
-}
-
-body.outline-collapsed .VPDocAside {
-  transform: translateX(100%);
-  width: 0;
-  opacity: 0;
-}
-
-/* 切换按钮容器 */
-.layout-toggle-buttons {
-  position: fixed;
-  top: calc(var(--vp-nav-height) + 16px);
-  left: 16px;
-  z-index: 100;
-  display: flex;
-  gap: 8px;
-}
-
-/* 切换按钮 */
-.layout-toggle-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: var(--vp-c-bg-elv);
-  border: 1px solid var(--vp-c-divider);
-  color: var(--vp-c-text-2);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  transition: all 0.2s ease;
-}
-
-.layout-toggle-btn:hover {
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-text-1);
-  border-color: var(--vp-c-brand-1);
-}
-
-.layout-toggle-btn.active {
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-  border-color: var(--vp-c-brand-1);
-}
-
-/* 侧边栏展开时的偏移调整 */
-body.has-sidebar .layout-toggle-buttons {
-  left: calc(var(--vp-sidebar-width) + 16px);
-}
-
-@media (max-width: 960px) {
-  body.has-sidebar .layout-toggle-buttons {
-    left: 16px;
-  }
-}
 
 /* ============================================
    打印样式
