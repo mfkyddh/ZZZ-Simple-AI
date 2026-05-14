@@ -1,4 +1,5 @@
 .workbuddy/
+outputs/
 docs/superpowers/
 
 # Site dependencies (site/ has its own .gitignore)
