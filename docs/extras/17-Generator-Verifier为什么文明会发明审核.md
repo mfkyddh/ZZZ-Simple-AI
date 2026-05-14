@@ -4,9 +4,9 @@ slug: generator-verifier-why-civilization-invents-review
 category: Agent理解
 tags: [Generator-Verifier, 审核, 验证, 生成器, 错误率]
 status: draft
-version: 0.1
+version: 0.2
 updated: 2026-05-14
-summary: 从"生成"与"验证"是两种不同能力出发，解释为什么任何存在错误率的系统最终都会演化出生成-验证结构，以及审核制度为何是文明的稳定器。
+summary: 解释为什么"生成"与"验证"是两种不同能力，以及为什么任何存在错误率的系统最终都会演化出生成-验证结构。关于Generator-Verifier模式的基本定义，请参考系列导读。
 related_mainline:
   - chapter: "04-智能体怎么工作"
     concept: "八部件框架中的观测与循环"
@@ -51,13 +51,9 @@ prerequisites: [理解智能体的基本工作原理, 了解八部件框架, 已
 
 ### 📝 术语
 
-| 项目 | 内容 |
-|:---|:---|
-| **生成器** | Generator，负责创造内容的角色——写代码、写文章、做方案 |
-| **验证器** | Verifier，负责检查质量的角色——找错误、核事实、控标准 |
-| **错误率** | Error Rate，生成内容中出现错误的比例 |
-| **假阳性** | False Positive，验证器把对的当成错的（误杀） |
-| **假阴性** | False Negative，验证器把错的当成对的（漏网） |
+- **Generator-Verifier**：生成器-验证器模式，详见[系列导读](../15-协作文明系列导读.md#五种协作模式速查)
+
+💭 在深入之前，建议先回顾导读中的"五种协作模式速查"。这里我们要探讨的是：为什么文明会"发明"审核？
 
 ---
 

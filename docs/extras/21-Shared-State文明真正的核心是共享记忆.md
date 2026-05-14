@@ -4,9 +4,9 @@ slug: shared-state-civilization-core-is-shared-memory
 category: Agent理解
 tags: [Shared State, 共享记忆, 文明, Git, Wiki, 开源]
 status: draft
-version: 0.1
+version: 0.2
 updated: 2026-05-14
-summary: 从"各看各的资料"的协作困境出发，解释Shared State的本质是共识而非存储，以及为什么共享记忆才是文明能够超越个体寿命、持续积累的核心机制。
+summary: 解释为什么共享记忆是文明能够持续积累的核心机制，以及Shared State的本质是共识而非存储。关于Shared State模式的基本定义，请参考系列导读。
 related_mainline:
   - chapter: "04-智能体怎么工作"
     concept: "八部件框架中的记忆部件"
@@ -47,12 +47,9 @@ prerequisites: [理解记忆系统, 了解Message Bus, 已阅读ext-16至ext-20]
 
 ### 📝 术语
 
-| 项目 | 内容 |
-|:---|:---|
-| **共享状态** | Shared State，所有Agent都能访问和修改的公共知识和记忆 |
-| **单一事实来源** | Single Source of Truth，所有决策依据的同一套基准数据 |
-| **共识** | Consensus，多个独立节点对同一事实达成一致 |
-| **版本控制** | Version Control，记录状态变更历史，支持回溯和协作 |
+- **Shared State**：共享状态模式，详见[系列导读](../15-协作文明系列导读.md#五种协作模式速查)
+
+💭 在深入之前，建议先回顾导读中的"五种协作模式速查"。这里我们要探讨的是：为什么共享记忆是文明的核心？
 
 ---
 

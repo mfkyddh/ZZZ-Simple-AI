@@ -4,9 +4,9 @@ slug: message-bus-why-market-beats-central-planning
 category: Agent理解
 tags: [Message Bus, 发布订阅, 去中心化, 自组织, 市场经济]
 status: draft
-version: 0.1
+version: 0.2
 updated: 2026-05-14
-summary: 从中央调度的瓶颈出发，解释发布-订阅模式的本质，以及为什么复杂系统最终都会从中央计划走向自组织化——市场经济就是最古老的Message Bus。
+summary: 解释为什么复杂系统最终都会从中央计划走向自组织化。关于Message Bus模式的基本定义，请参考系列导读。
 related_mainline:
   - chapter: "04-智能体怎么工作"
     concept: "八部件框架中的工具与观测"
@@ -47,12 +47,9 @@ prerequisites: [理解Orchestrator的局限, 了解层级结构, 已阅读ext-16
 
 ### 📝 术语
 
-| 项目 | 内容 |
-|:---|:---|
-| **消息总线** | Message Bus，代理之间不直接通信，而是通过公共通道交换信息 |
-| **发布-订阅** | Publish-Subscribe，发送方广播消息，接收方按需订阅 |
-| **中央计划** | Central Planning，由一个中心节点统一分配资源和任务 |
-| **自组织** | Self-Organization，系统在没有中央控制的情况下自发形成秩序 |
+- **Message Bus**：消息总线模式，详见[系列导读](../15-协作文明系列导读.md#五种协作模式速查)
+
+💭 在深入之前，建议先回顾导读中的"五种协作模式速查"。这里我们要探讨的是：为什么市场会战胜中央计划？
 
 ---
 

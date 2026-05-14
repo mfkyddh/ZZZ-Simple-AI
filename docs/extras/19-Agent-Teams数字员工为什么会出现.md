@@ -4,9 +4,9 @@ slug: agent-teams-why-digital-employees-emerge
 category: Agent理解
 tags: [Agent Teams, 数字员工, 长期记忆, 角色, 组织身份]
 status: draft
-version: 0.1
+version: 0.2
 updated: 2026-05-14
-summary: 从临时代理与固定团队的本质差异出发，解释长期记忆如何塑造AI的"角色身份"，以及为什么组织最终会需要"数字员工"而非"临时工具"。
+summary: 解释为什么固定团队比临时组合更有效，以及为什么组织最终会需要"数字员工"。关于Agent Teams模式的基本定义，请参考系列导读。
 related_mainline:
   - chapter: "04-智能体怎么工作"
     concept: "八部件框架中的记忆部件"
@@ -47,12 +47,9 @@ prerequisites: [理解智能体的基本工作原理, 了解记忆系统, 已阅
 
 ### 📝 术语
 
-| 项目 | 内容 |
-|:---|:---|
-| **Agent团队** | Agent Teams，有固定角色和长期记忆的代理组合 |
-| **临时代理** | Ephemeral Agent，按需创建、用完即销毁的代理 |
-| **角色** | Role，Agent在团队中承担的稳定职责和身份 |
-| **团队记忆** | Team Memory，团队成员共享的上下文和历史经验 |
+- **Agent Teams**：固定团队模式，详见[系列导读](../15-协作文明系列导读.md#五种协作模式速查)
+
+💭 在深入之前，建议先回顾导读中的"五种协作模式速查"。这里我们要探讨的是：为什么固定团队比临时组合更强？
 
 ---
 
