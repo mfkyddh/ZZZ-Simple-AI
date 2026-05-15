@@ -1,6 +1,6 @@
 ---
-title: 协作文明系列第5篇——Message Bus：为什么市场会战胜中央计划
-slug: message-bus-why-market-beats-central-planning
+title: 协作文明系列第5篇——Message Bus：为什么市场模式会成为主导
+slug: message-bus-why-market-becomes-dominant
 category: Agent理解
 tags: [Message Bus, 发布订阅, 去中心化, 自组织, 市场经济]
 status: draft
@@ -17,7 +17,7 @@ related_mainline:
 prerequisites: [理解Orchestrator的局限, 了解层级结构, 已阅读ext-16至ext-19]
 ---
 
-# 📢 扩展章节：协作文明系列第5篇——**Message Bus**——为什么市场会战胜中央计划
+# 📢 扩展章节：协作文明系列第5篇——**Message Bus**——为什么市场模式会成为主导
 
 ## 🤔 读前先想
 
@@ -106,6 +106,18 @@ Orchestrator的处理能力是有限的：
 - 中央调度有硬性的容量上限
 - 当系统规模超过这个上限，要么**分层**（更多Orchestrator），要么**放权**（Agent自主）
 - **Message Bus是"放权"的技术实现——让Agent自己决定听什么、做什么**
+
+**Message Bus vs Orchestrator 快速对比：**
+
+| 维度 | Orchestrator | Message Bus |
+|:---|:---|:---|
+| 协调方式 | 中心化（有中枢） | 去中心化（无中枢） |
+| 决策权 | 协调器做决策 | 各Agent自主决策 |
+| 通信模式 | Agent↔协调器↔Agent | Agent↔Bus↔Agent |
+
+---
+
+> 回扣总纲（Ext-16）提出的五种协作混乱——Message Bus要解决的是第四种：**信息不同步**。当A改了需求、B还在用旧版本，信息没有同步机制时，Message Bus通过广播机制让"改了什么"被所有相关方看到。
 
 ---
 
@@ -212,7 +224,9 @@ Agent E 没订阅任何标签 → 什么也不知道，安心做自己的事
 
 ### 🧐 你可以先这样理解
 
-**计划经济 vs 市场经济：**
+**计划经济 vs 市场经济——为什么市场成为主导？**
+
+> *需要先说明一点：市场模式在**信息高度分散、需求快速变化**的场景中占优；中央计划在**目标清晰、变量可控、安全攸关**的场景中仍有价值。以下对比聚焦前一类场景。*
 
 | 维度 | 计划经济（中央调度） | 市场经济（Message Bus） |
 |:---|:---|:---|
