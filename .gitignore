@@ -1,9 +1,19 @@
+# 工具生成目录（非项目知识资产）
 .workbuddy/
+.writing/
 outputs/
+
+# 已废弃
 docs/superpowers/
 
-# Site dependencies (site/ has its own .gitignore)
+# 站点（site/ 有独立 .gitignore，此处兜底）
 site/node_modules/
 site/.vitepress/dist/
 site/.vitepress/cache/
 site/content/
+
+# 编辑器与系统
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
