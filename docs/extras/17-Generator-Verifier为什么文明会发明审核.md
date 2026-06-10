@@ -17,7 +17,7 @@ related_mainline:
 prerequisites: [理解智能体的基本工作原理, 了解八部件框架, 已阅读ext-16系列总纲]
 ---
 
-# 🔍 扩展章节：协作文明系列第2篇——Generator-Verifier——为什么文明一定会发明"审核"
+# 🔍 扩展章节：协作文明系列第2篇——Generator-Verifier（生成器-验证器模式）——为什么文明一定会发明"审核"
 
 ## 🤔 读前先想
 

@@ -17,7 +17,7 @@ related_mainline:
 prerequisites: [理解Orchestrator的局限, 了解层级结构, 已阅读ext-16至ext-19]
 ---
 
-# 📢 扩展章节：协作文明系列第5篇——**Message Bus**——为什么市场模式会成为主导
+# 📢 扩展章节：协作文明系列第5篇——**Message Bus（消息总线模式）**——为什么市场模式会成为主导
 
 ## 🤔 读前先想
 

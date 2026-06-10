@@ -17,7 +17,7 @@ related_mainline:
 prerequisites: [理解记忆系统, 了解Message Bus, 已阅读ext-16至ext-20]
 ---
 
-# 🗂️ 扩展章节：协作文明系列第6篇——**Shared State**——文明真正的核心，其实是共享记忆
+# 🗂️ 扩展章节：协作文明系列第6篇——**Shared State（共享状态模式）**——文明真正的核心，其实是共享记忆
 
 ## 🤔 读前先想
 
